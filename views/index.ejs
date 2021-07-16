@@ -1,0 +1,45 @@
+<%- include('./partials/header') %>  
+  <div id="nav">
+      <div class="container c-custom id="nav ">
+        <div class="row">
+          <div class="col">
+            <div class="logo-img">
+              <img
+                src="https://cdn.honey.io/images/header/logo-black-small.svg"
+                alt="avatar-img"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="header text-end">
+              <a
+                href="https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj?hl=en"
+                >Add to chrome</a
+              >
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- At this point I'm just looping through -->
+<div class="container mt-5 p-5">
+  <div class="row justify-content-center">
+    <% for(let i = 0; i < posts.length; i++) { %>
+    <div class="col-md-4 col-sm-6 margin">
+      <div class="img-thumbnail">
+        <img src="<%=posts[i].imageUrl%>" class="img" alt="avatar-img" />
+        <div class="cardStyle">
+          <div class="caption space">
+            <h5 class="postHeader"><%= posts[i].postHeader.substring(0, 55) + ". . ."%></h5>
+            <p class="postBody"><%=posts[i].postBody%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
