@@ -9,6 +9,7 @@
   "author": "Samuel",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node-cron": "^3.0.0"
   }
